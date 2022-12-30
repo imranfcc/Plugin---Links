@@ -11,6 +11,7 @@
 <!-- Start : Your Page Source -->
 <div class="container">
 	<div class="row">
+	<div class="col">
 <?php
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
@@ -20,6 +21,7 @@
 		echo $row["InId"]."<br>";
 	}
  ?>
+</div>
 </div>
 </div>
 <!-- End : Your Page Source -->
