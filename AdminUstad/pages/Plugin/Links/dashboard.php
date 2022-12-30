@@ -13,6 +13,7 @@
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
 		echo $row["Title"]."<br>";
+		echo $row["Link"]."<br>";
 	}
  ?>
 
