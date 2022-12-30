@@ -11,7 +11,9 @@
 <!-- Start : Your Page Source -->
 <?php
 	$result=\P\Links\lists("0");
-	print_r($result);
+	while($row = $result->fetch_assoc()) {
+		echo $row["Title"]."<br>";
+	}
  ?>
 
 <!-- End : Your Page Source -->
