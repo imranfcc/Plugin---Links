@@ -14,6 +14,7 @@
 	while($row = $result->fetch_assoc()) {
 		echo $row["Title"]."<br>";
 		echo $row["Link"]."<br>";
+		echo $row["Target"]."<br>";
 	}
  ?>
 
