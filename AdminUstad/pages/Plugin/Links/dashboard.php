@@ -19,8 +19,8 @@
 		echo $row["InId"]."<br>";
 	}
  ?>
-
+</div>
 <!-- End : Your Page Source -->
-<?php include("pages/inc/bs4_bottombar.php"); ?></div>
+<?php include("pages/inc/bs4_bottombar.php"); ?>
 </body>
 </html>
