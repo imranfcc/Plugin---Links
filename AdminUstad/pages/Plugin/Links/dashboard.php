@@ -11,7 +11,7 @@
 <!-- Start : Your Page Source -->
 <div class="container">
 	<div class="row">
-	<div class="col">
+	<div class="card">
 <?php
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
