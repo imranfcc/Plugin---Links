@@ -9,9 +9,13 @@
 <div class="modal" id="sh-Modal-Ajax"></div>
 <div class="modal" id="sh-Modal-Waiting"><div class="modal-dialog modal-dialog-centered text-center"><i class="fas fa-cog fa-spin fa-5x mx-auto"></i></div></div>
 <!-- Start : Your Page Source -->
-<div class="container">
+<main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
-	<div class="card">
+		<div class="card border-0 p-0">
+
+		</div>
+	</div>
+</main>
 <?php
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
