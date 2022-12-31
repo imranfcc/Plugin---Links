@@ -10,7 +10,6 @@
 <div class="modal" id="sh-Modal-Waiting"><div class="modal-dialog modal-dialog-centered text-center"><i class="fas fa-cog fa-spin fa-5x mx-auto"></i></div></div>
 <!-- Start : Your Page Source -->
 <div class="container">
-	<p class='test-info'>
 	<div class="row">
 	<div class="row">
 	<div class="card">
@@ -27,7 +26,7 @@
 </div>
 </div>
 </div>
-</div>
+
 
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>
