@@ -12,16 +12,15 @@
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
 		<div class="card border-0 p-0">
-<?php
-	$result=\P\Links\lists("0");
-	while($row = $result->fetch_assoc()) {
-		echo"<div class='card-body border-bottom'>";
-		echo $row["Title"]."<br>";
-		echo $row["Link"]."<br>";
-		echo $row["Target"]."<br>";
-		echo $row["InId"]."<br></div>";
-	}
- ?>
+			<?php
+				$result=\P\Links\lists("0");
+				while($row = $result->fetch_assoc()) { ?>
+					<a class="card-body card-hover border-bottom p-2 text-decoration-none text-body" href="<?php echo"$AdminFolder"; ?>/Plugin/<?php echo"$Plugin"; ?>/Pages/edit?EditID=<?php echo $row["Id"]; ?>" >
+						<div class="">
+							<?php echo $row["Title"]; ?>
+						</div>
+					</a>
+			<?php } ?>			
 		</div>
 	</div>
 </main>
