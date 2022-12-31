@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php 
+if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="0"; }
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<?php include("pages/inc/Header.php"); ?>
@@ -13,7 +16,7 @@
 	<div class="row">
 		<div class="card border-0 p-0">
 			<?php
-				$result=\P\Links\lists(array("Id"=>"0"));
+				$result=\P\Links\lists(array("Id"=>$ShowInId));
 				while($row = $result->fetch_assoc()) { ?>
 					<a class="card-body card-hover border-bottom p-2 text-decoration-none text-body" href="<?php echo"$AdminFolder"; ?>/Plugin/<?php echo"$Plugin"; ?>/Pages/edit?EditID=<?php echo $row["Id"]; ?>" >
 						<div class="">
