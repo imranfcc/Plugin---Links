@@ -12,6 +12,11 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 <div class="modal" id="sh-Modal-Ajax"></div>
 <div class="modal" id="sh-Modal-Waiting"><div class="modal-dialog modal-dialog-centered text-center"><i class="fas fa-cog fa-spin fa-5x mx-auto"></i></div></div>
 <!-- Start : Your Page Source -->
+<style>
+	.car-hover:hover{
+		background-color:F0FFF0;
+	}
+	</style>
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
 		<div class="card border-0 p-0">
