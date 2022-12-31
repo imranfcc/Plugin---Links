@@ -18,7 +18,7 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 			<?php
 				$result=\P\Links\lists(array("Id"=>$ShowInId));
 				while($row = $result->fetch_assoc()) { ?>
-					<a class="card-body card-hover border-bottom p-2 text-decoration-none text-body" href="<?php echo"$AdminFolder"; ?>/Plugin/<?php echo"$Plugin"; ?>/Pages/edit?EditID=<?php echo $row["Id"]; ?>" >
+					<a class="card-body card-hover border-bottom p-2 text-decoration-none text-body" href="<?php echo"$AdminFolder"; ?>/Plugin/<?php echo"$Plugin"; ?>/dashboard?ShowInId=<?php echo $row["Id"]; ?>" >
 						<div class="">
 							<?php echo $row["Title"]; ?>
 						</div>
