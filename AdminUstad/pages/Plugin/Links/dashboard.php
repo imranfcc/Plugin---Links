@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="card border-0 p-0">
 			<?php
-				$result=\P\Links\lists("0");
+				$result=\P\Links\lists(array("Id"=>"0"));
 				while($row = $result->fetch_assoc()) { ?>
 					<a class="card-body card-hover border-bottom p-2 text-decoration-none text-body" href="<?php echo"$AdminFolder"; ?>/Plugin/<?php echo"$Plugin"; ?>/Pages/edit?EditID=<?php echo $row["Id"]; ?>" >
 						<div class="">
@@ -24,8 +24,6 @@
 		</div>
 	</div>
 </main>
-
-
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>
 </body>
