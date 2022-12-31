@@ -11,6 +11,7 @@
 <!-- Start : Your Page Source -->
 <div class="container">
 	<div class="row">
+	<div class="coll">
 	<div class="card">
 <?php
 	$result=\P\Links\lists("0");
@@ -25,6 +26,7 @@
 </div>
 </div>
 </div>
+</dv>
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>
 </body>
