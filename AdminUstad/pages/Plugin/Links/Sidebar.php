@@ -12,7 +12,7 @@
 	<!-- Modal body -->
 	<div class="modal-body">
 		<div class="btn-group-vertical rounded-0 btn-group-lg w-100">
-		<a href="test.php" class="btn btn-light text-start" >Subscription</a>
+		<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink" class="btn btn-light text-start" >Add Link</a>
 		</div>
 	</div>
 
