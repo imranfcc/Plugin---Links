@@ -11,22 +11,22 @@
 <!-- Start : Your Page Source -->
 <div class="container">
 	<div class="row">
-	<div class="col">
 	<div class="card">
 <?php
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
 		echo"<div class='card-body border-bottom'>";
+		echo"<div class='col'>";
 		echo $row["Title"]."<br>";
 		echo $row["Link"]."<br>";
 		echo $row["Target"]."<br>";
-		echo $row["InId"]."<br></div>";
+		echo $row["InId"]."<br></div></div>";
 	}
  ?>
 </div>
 </div>
 </div>
-</dv>
+
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>
 </body>
