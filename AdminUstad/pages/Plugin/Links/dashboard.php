@@ -12,10 +12,6 @@
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
 		<div class="card border-0 p-0">
-
-		</div>
-	</div>
-</main>
 <?php
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
@@ -26,9 +22,9 @@
 		echo $row["InId"]."<br></div>";
 	}
  ?>
-</div>
-</div>
-</div>
+		</div>
+	</div>
+</main>
 
 
 <!-- End : Your Page Source -->
