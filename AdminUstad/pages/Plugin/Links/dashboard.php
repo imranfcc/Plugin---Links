@@ -16,11 +16,10 @@
 	$result=\P\Links\lists("0");
 	while($row = $result->fetch_assoc()) {
 		echo"<div class='card-body border-bottom'>";
-		echo"<div class='col'>";
 		echo $row["Title"]."<br>";
 		echo $row["Link"]."<br>";
 		echo $row["Target"]."<br>";
-		echo $row["InId"]."<br></div></div>";
+		echo $row["InId"]."<br></div>";
 	}
  ?>
 </div>
