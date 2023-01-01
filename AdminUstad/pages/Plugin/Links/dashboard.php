@@ -15,7 +15,7 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 <style>
 	.card-hover:hover{
 		background-color:#F0FFF0;
-		.text-success
+		text-dark;
 	}
 	</style>
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
