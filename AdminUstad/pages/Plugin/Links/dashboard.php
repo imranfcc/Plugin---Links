@@ -14,14 +14,10 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 <!-- Start : Your Page Source -->
 <style>
 	.card-hover:hover{
-		background-color:#F0FFF0;
+		background-color:#F0FFF0; color:blue;
 		}
 </style>
-<style>
-	body {
-  	color: blue;
-}
-</style>
+
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
 		<div class="card border-0 p-0">
