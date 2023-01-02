@@ -18,7 +18,7 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 		}
 		.body
              {
-				color:red;
+				text:red;
 			 }
 			
 		
