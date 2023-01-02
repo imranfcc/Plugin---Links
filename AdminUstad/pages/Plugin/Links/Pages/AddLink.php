@@ -11,32 +11,34 @@
 <!-- Start : Your Page Source -->
 
 
-echo Welcome to my Add Link Page
-<form>
-  <div class="form-group">
-    <label for="">Status</label>
-    <input name="Status" class="form-control"  aria-describedby="emailHelp" placeholder="Status">
-  </div>
-  <div class="form-group">
-     Title</label>
-    <input name="Title" class="form-control"  placeholder="Title">
-  </div>
-  <div class="form-group">
-     Link</label>
-    <input name="Link" class="form-control"  placeholder="Link">
-  </div>
-  <div class="form-group">
-     Target</label>
-    <input name="Target" class="form-control"  placeholder="Target">
-  </div>
-  <div class="form-group">
-     InId</label>
-    <input name="InId" class="form-control"  placeholder="InId">
-  </div>
-  <div class="form-group">
-     Icon</label>
-    <input name="Icon" class="form-control placeholder="Icon">
-  </div>
+<form class="">
+<div class="form-floating">
+  <select class="form-select" id="sel1" name="sellist">
+    <option>Enable</option>
+    <option>Disable</option>
+  </select>
+  <label for="sel1" class="form-abel">Select list (select one):</label>
+</div>
+<div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="email">Title</label>
+    </div>
+	<div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="email">Link</label>
+    </div>
+	<div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="email">Target</label>
+    </div>
+	<div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="email">Email</label>
+    </div>
+	<div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="email">Icon</label>
+    </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
