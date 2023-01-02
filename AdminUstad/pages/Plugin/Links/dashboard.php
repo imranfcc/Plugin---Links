@@ -16,10 +16,9 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 	.card-hover:hover{
 		background-color: #F0FFF0; 
 		}
-		.body
-             {
-				font:red;
-			 }
+	.card-hover{
+		color:Yellow;
+	}
 			
 		
 </style>
