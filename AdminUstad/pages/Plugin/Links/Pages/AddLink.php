@@ -10,8 +10,38 @@
 <div class="modal" id="sh-Modal-Waiting"><div class="modal-dialog modal-dialog-centered text-center"><i class="fas fa-cog fa-spin fa-5x mx-auto"></i></div></div>
 <!-- Start : Your Page Source -->
 
+<main class="<?php echo \template\cfg("WebWidth"); ?>">
+	<div class="row">
+		<form action="" method="">
+			<div class="form-floating mb-3 mt-3">
+			<select class="form-select" id="sel1" name="sellist">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+				<label for="email">Status</label>
+			</div>
+			<div class="form-floating mb-3 mt-3">
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+				<label for="email">Title</label>
+			</div>
+			<div class="form-floating mb-3 mt-3">
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+				<label for="email">Link</label>
+			</div>
+			<div class="form-floating mb-3 mt-3">
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+				<label for="email">Target</label>
+			</div>
+			<div class="form-floating mb-3 mt-3">
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+				<label for="email">Icon</label>
+			</div>
 
-echo Welcome to my Add Link Page
+		</form>
+	</div>
+</main>
 
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>

@@ -1,5 +1,11 @@
 <?php 
-if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="0"; }
+if(isset($_GET["ShowInId"])){ 
+	$ShowInId=$_GET["ShowInId"]; 
+	$ShowName=\P\Links\Id_to_Name($_GET["ShowInId"]);
+} else {  
+	$ShowInId="0";
+	$ShowName="root";
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -16,13 +22,27 @@ if(isset($_GET["ShowInId"])){ $ShowInId=$_GET["ShowInId"]; } else {  $ShowInId="
 	.card-hover:hover{
 		background-color:#F0FFF0;
 	}
-	</style>
+</style>
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
 		<div class="card border-0 p-0">
+			<div class="card-header p-2 bg-white fw-bold" style="color: var(--bs-green);">
+				<?php if($ShowInId>"0"){ ?><i class="fad fa-edit float-end text-dark"></i><?php } ?>
+				<?php echo $ShowName; ?>:
+			</div>
+
 			<?php
 				$result=\P\Links\lists(array("Id"=>$ShowInId));
 				while($row = $result->fetch_assoc()) { ?>
+					<div class="card-body d-none card-hover border-bottom p-2 text-decoration-none text-body">
+						
+						<a class="p-2 ">
+							title
+						</a>
+						<a class="p-2 d-none">
+							<i class="fas fa-caret-down"></i>
+						</a>
+					</div>
 					<a class="card-body card-hover border-bottom p-2 text-decoration-none text-body" href="<?php echo"$AdminFolder"; ?>/Plugin/<?php echo"$Plugin"; ?>/dashboard?ShowInId=<?php echo $row["Id"]; ?>" >
 						<div class="">
 							<?php echo $row["Title"]; ?>
