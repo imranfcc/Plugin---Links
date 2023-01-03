@@ -45,9 +45,9 @@
 	</div>
 </main>
 <?php
-$con = mysqli_connect('localhost','imtest_new','12345');
-$insert = mysqli_query($con, "INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
-	VALUES ('Enable','Computer' ,'Laptop','Sale' ,'15')");
+
+$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
+	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
 ?>	
 
 
