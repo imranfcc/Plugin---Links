@@ -12,7 +12,7 @@
 
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
-		<form action='AddLink.php' Method='POST'>
+		<form action='' Method='POST'>
 			<div class="form-floating">
   				<select class="form-select" id="sel1" name="sellist">
    					<option>Enable</option>
