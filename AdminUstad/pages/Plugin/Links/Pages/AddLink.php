@@ -21,7 +21,7 @@
   				<label for="sel1" class="form-abel">Select list (select one):</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      			<input name="Title" class="form-control" id="email" placeholder="Type Title">
       			<label for="email">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
@@ -48,8 +48,8 @@
 
 //$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
 //	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
-$sql = "INSERT INTO sh_pl_links ()
-VALUES ()";
+$sql = "INSERT INTO sh_pl_links (Title)
+VALUES ($_POST[Title])";
 
 $con->query($sql);
 ?>	
