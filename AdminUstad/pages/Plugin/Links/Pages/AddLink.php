@@ -48,8 +48,8 @@
 
 //$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
 //	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
-$sql = "INSERT INTO sh_pl_links (Title)
-VALUES ($_POST[Title])";
+$sql = "INSERT INTO sh_pl_links (`Title`)
+VALUES ('imran')";
 
 $con->query($sql);
 ?>	
