@@ -33,7 +33,7 @@
       			<label for="Target">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="InId" class="form-control"  placeholder"InId">
+      			<input name="InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
       			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
@@ -48,13 +48,15 @@
 
 //$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
 //	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
+if(isset($_POST[Id])){
+
 $T=$_POST["Title"];
 $l=$_POST["Link"];
 $tt=$_POST["Target"];
 $i=$_POST["InId"];
 $sql = "INSERT INTO sh_pl_links (`Title`,`Link`,`Target`,`InId`)
 VALUES ('$T','$l','$tt','$i')";
-
+}
 $con->query($sql);
 ?>	
 
