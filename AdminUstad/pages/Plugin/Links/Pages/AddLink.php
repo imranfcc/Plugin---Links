@@ -33,7 +33,7 @@
       			<label for="email">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="InId" class="form-control"  placeholder="Enter email">
+      			<input name="InId" class="form-control"  placeholder"InId">
       			<label for="email">Email</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
@@ -52,7 +52,7 @@ $T=$_POST["Title"];
 $l=$_POST["Link"];
 $tt=$_POST["Target"];
 $i=$_POST["InId"];
-$sql = "INSERT INTO sh_pl_links (`Title`)
+$sql = "INSERT INTO sh_pl_links (`Title`,`Link`,`Target`,`InId`)
 VALUES ('$T','$l','$tt','$i')";
 
 $con->query($sql);
