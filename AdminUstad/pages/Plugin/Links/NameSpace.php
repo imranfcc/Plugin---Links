@@ -1,6 +1,8 @@
 <?php
 namespace P\Links;
 
+
+
 function lists($Get){
   global $con; 
   $sql = "SELECT * FROM `sh_pl_links`  WHERE `InId`='$Get[Id]'"; //
@@ -16,4 +18,13 @@ function Id_to_Name($Id){
   return $return;
 
 }
+function Insert($Get){
+  global $con;
+  // Insert not complete
+  
+  $sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`, `Link`)
+  VALUES ('Enable', 'Azhar', 'Links')";
+  $con->query($sql);
+}
+
 ?>
