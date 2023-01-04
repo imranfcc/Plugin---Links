@@ -22,19 +22,19 @@
 			</div>
 			<div class="form-floating mb-3 mt-3">
       			<input name="Title" class="form-control" id="email" placeholder="Type Title">
-      			<label for="email">Title</label>
+      			<label for="Title">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
       			<input name="Link" class="form-control"  placeholder="Link" >
-      			<label for="email">Link</label>
+      			<label for="Link">Link</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
       			<input name="Target" class="form-control"  placeholder="Target">
-      			<label for="email">Target</label>
+      			<label for="Target">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
       			<input name="InId" class="form-control"  placeholder"InId">
-      			<label for="email">Email</label>
+      			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
       			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
