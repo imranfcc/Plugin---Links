@@ -25,15 +25,15 @@
       			<label for="email">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      			<input name="Link" class="form-control"  placeholder="Link" >
       			<label for="email">Link</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      			<input name="Target" class="form-control"  placeholder="Target">
       			<label for="email">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      			<input name="InId" class="form-control"  placeholder="Enter email">
       			<label for="email">Email</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
