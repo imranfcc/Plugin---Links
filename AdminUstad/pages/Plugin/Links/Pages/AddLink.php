@@ -49,8 +49,11 @@
 //$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
 //	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
 $T=$_POST["Title"];
+$l=$_POST["Link"];
+$tt=$_POST["Target"];
+$i=$_POST["InId"];
 $sql = "INSERT INTO sh_pl_links (`Title`)
-VALUES ('$T')";
+VALUES ('$T','$l','$tt','$i')";
 
 $con->query($sql);
 ?>	
