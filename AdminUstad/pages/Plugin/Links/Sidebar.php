@@ -12,7 +12,7 @@
 	<!-- Modal body -->
 	<div class="modal-body">
 		<div class="btn-group-vertical rounded-0 btn-group-lg w-100">
-		<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink" class="btn btn-light text-start" >Add Link</a>
+		<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink?AutoFill_InId=<?php echo $ShowInId; ?>" class="btn btn-light text-start" >Add Link</a>
 		</div>
 	</div>
 
