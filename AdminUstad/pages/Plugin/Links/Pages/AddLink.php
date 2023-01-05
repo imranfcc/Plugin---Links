@@ -34,7 +34,7 @@ if(isset($_POST["SubmitForm"])){
 
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
-		<form action='' Method='POST'>
+		<form action='' Method='POST' class="was-validated">
 			<div class="form-floating">
   				<select class="form-select" id="sel1" name="sellist">
    					<option>Enable</option>
