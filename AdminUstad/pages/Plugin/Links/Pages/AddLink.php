@@ -21,7 +21,7 @@
   				<label for="sel1" class="form-abel">Select list (select one):</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="Title" class="form-control" id="email" placeholder="Type Title">
+      			<input name="Title" class="form-control" id="email" placeholder="Type Title" value="">
       			<label for="Title">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
@@ -40,7 +40,7 @@
       			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
       			<label for="email">Icon</label>
     		</div>
-  			<button type="submit" class="btn btn-primary">Submit</button> 
+  			<button type="submit" name="user" class="btn btn-primary">Submit</button> 
 		</form>
 	</div>
 </main>
@@ -49,14 +49,16 @@
 //$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
 //	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
 
-
+if(isset($_POST[user]))
+{
 $T=$_POST["Title"];
 $l=$_POST["Link"];
 $tt=$_POST["Target"];
 $i=$_POST["InId"];
+
 $sql = "INSERT INTO sh_pl_links (`Title`,`Link`,`Target`,`InId`)
 VALUES ('$T','$l','$tt','$i')";
-
+}
 $con->query($sql);
 ?>	
 
