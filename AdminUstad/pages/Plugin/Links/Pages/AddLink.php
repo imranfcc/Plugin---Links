@@ -10,6 +10,7 @@ if(isset($_POST["SubmitForm"])){
 
 	if ($result->num_rows > 0) {
 		$Error_Title="This Title name is alrady exist!";
+		?><script>alert("Error")</script><?php
 	}  else {
 		// Insert Now
 		$sql = "INSERT INTO sh_pl_links (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
