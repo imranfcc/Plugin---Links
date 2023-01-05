@@ -1,10 +1,10 @@
 <?php
 if(isset($_POST["SubmitForm"])){
-	$ValueTitle=mysqli_real_escape_string($con, $_POST[""]);
-	$ValueLink=mysqli_real_escape_string($con, $_POST[""]);
-	$ValueTarget=mysqli_real_escape_string($con, $_POST[""]);
-	$ValueInId=mysqli_real_escape_string($con, $_POST[""]);
-	$ValueIcon=mysqli_real_escape_string($con, $_POST[""]);
+	$ValueTitle=mysqli_real_escape_string($con, $_POST["FormLink_Title"]);
+	$ValueLink=mysqli_real_escape_string($con, $_POST["FormLink_Link"]);
+	$ValueTarget=mysqli_real_escape_string($con, $_POST["FormLink_Target"]);
+	$ValueInId=mysqli_real_escape_string($con, $_POST["FormLink_InId"]);
+	$ValueIcon=mysqli_real_escape_string($con, $_POST["FormLink_Icon"]);
 	$sql = "SELECT Id FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
 	$result = $conn->query($sql);
 
