@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+if(isset($_POST["SubmitForm"])){
+	$ValueTitle=mysqli_real_escape_string($con, $_POST[""]);
+	$ValueLink=mysqli_real_escape_string($con, $_POST[""]);
+	$ValueTarget=mysqli_real_escape_string($con, $_POST[""]);
+	$ValueInId=mysqli_real_escape_string($con, $_POST[""]);
+	$ValueIcon=mysqli_real_escape_string($con, $_POST[""]);
+	$sql = "SELECT Id FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+		$Error_Title="This Title name is alrady exist!";
+	}  else {
+		// Insert Now
+		$sql = "INSERT INTO sh_pl_links (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
+		VALUES ('Status', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
+		if($con->query($sql)===TRUE){
+			header("Location: ".$AdminFolder."/pages/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
+		}
+	}
+} // Close POST
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<?php include("pages/inc/Header.php"); ?>
@@ -21,26 +42,27 @@
   				<label for="sel1" class="form-abel">Select list (select one):</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="Title" class="form-control" id="email" placeholder="Type Title" value="">
+      			<input name="FormLink_Title" class="form-control" id="email" placeholder="Type Title">
       			<label for="Title">Title</label>
+				<?php if(isset($Error_Title)){ ?><div class="invalid-feedback"><?php echo $Error_Title; ?></div><?php } ?>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="Link" class="form-control"  placeholder="Link" >
+      			<input name="FormLink_Link" class="form-control"  placeholder="Link" >
       			<label for="Link">Link</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="Target" class="form-control"  placeholder="Target">
+      			<input name="FormLink_Target" class="form-control"  placeholder="Target">
       			<label for="Target">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
+      			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
       			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon">
       			<label for="email">Icon</label>
     		</div>
-  			<button type="submit" name="user" class="btn btn-primary">Submit</button> 
+  			<button type="submit" name="SubmitForm" value="Links" class="btn btn-primary">Submit</button> 
 		</form>
 	</div>
 </main>
