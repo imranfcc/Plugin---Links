@@ -34,7 +34,12 @@ if(isset($_POST["SubmitForm"])){
 
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
-		<form action='' Method='POST' class="was-validated">
+		<?php if(isset($Error_Title)){ ?>
+		<div class="alert alert-danger">
+    		<strong>Error!</strong> <?php echo $Error_Title; ?>
+  		</div><?php } ?>
+
+		<form action='' Method='POST' class="">
 			<div class="form-floating">
   				<select class="form-select" id="sel1" name="sellist">
    					<option>Enable</option>
@@ -45,7 +50,6 @@ if(isset($_POST["SubmitForm"])){
 			<div class="form-floating mb-3 mt-3">
       			<input name="FormLink_Title" class="form-control" id="email" placeholder="Type Title">
       			<label for="Title">Title</label>
-				<?php if(isset($Error_Title)){ ?><div class="invalid-feedback"><?php echo $Error_Title; ?></div><?php } ?>
 			</div>
 			<div class="form-floating mb-3 mt-3">
       			<input name="FormLink_Link" class="form-control"  placeholder="Link" >
