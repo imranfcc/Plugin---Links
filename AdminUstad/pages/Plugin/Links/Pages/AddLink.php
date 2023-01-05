@@ -6,7 +6,7 @@ if(isset($_POST["SubmitForm"])){
 	$ValueInId=mysqli_real_escape_string($con, $_POST["FormLink_InId"]);
 	$ValueIcon=mysqli_real_escape_string($con, $_POST["FormLink_Icon"]);
 	$sql = "SELECT Id FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
-	$result = $conn->query($sql);
+	$result = $con->query($sql);
 
 	if ($result->num_rows > 0) {
 		$Error_Title="This Title name is alrady exist!";
