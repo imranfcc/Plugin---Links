@@ -13,7 +13,7 @@ if(isset($_POST["SubmitForm"])){
 		?><script>alert("Error")</script><?php
 	}  else {
 		// Insert Now
-		$sql = "INSERT INTO sh_pl_links (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
+		$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
 		VALUES ('Status', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
 		if($con->query($sql)===TRUE){
 			header("Location: ".$AdminFolder."/pages/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
