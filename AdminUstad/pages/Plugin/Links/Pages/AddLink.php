@@ -23,7 +23,7 @@ if(isset($_POST["SubmitForm"])){
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php include("pages/inc/Header.php"); ?>
+	<?php include('pages/inc/Header.php'); ?>
 </head>
 <body class="v3">
 <?php \template\navbar(array("Btn_Search"=>false,"Btn_BackLink"=>"$AdminFolder/Plugin/$Plugin/dashboard")); ?>
