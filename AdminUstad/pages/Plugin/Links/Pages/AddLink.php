@@ -67,7 +67,8 @@ if(isset($_POST["SubmitForm"])){
       			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon">
       			<label for="email">Icon</label>
     		</div>
-  			<button type="submit" name="SubmitForm" value="Links" class="btn btn-primary">Submit</button> 
+  			<!--<button type="submit" name="SubmitForm" value="Links" class="btn btn-primary">Submit</button> -->
+			  <button class="btn btn-primary" type="submit" name='SubmitForm'>Button</button>
 		</form>
 	</div>
 </main>
