@@ -60,9 +60,7 @@ if(isset($_POST["SubmitForm"])){
       			<label for="Target">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_InId" class="form-control"  placeholder"InId" autocomplete="off" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"];}}else {      
-    AutoFill_InId = 'null';
-} ?>"autocomplete="off">
+      			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
       			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
