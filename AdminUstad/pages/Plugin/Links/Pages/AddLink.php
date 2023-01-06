@@ -48,7 +48,7 @@ if(isset($_POST["SubmitForm"])){
   				<label for="sel1" class="form-abel">Select list (select one):</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_Title" class="form-control" id="email" placeholder="Type Title">
+      			<input name="FormLink_Title" class="form-control" id="email" placeholder="Type Title"  required>
       			<label for="Title">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
