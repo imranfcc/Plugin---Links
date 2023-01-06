@@ -69,7 +69,7 @@ if(isset($_POST["SubmitForm"])){
     		</div>
   			<!--<button type="submit" name="SubmitForm" value="Links" class="btn btn-primary">Submit</button> -->
 			  <div class="d-grid gap-2">
-  				<button class="btn btn-primary" type="submit" name='SubmitForm'>Button</button>
+  				<button class="btn btn-primary" type="submit" name='SubmitForm'>SubmitForm</button>
   				
 			  </div>
 		</form>
