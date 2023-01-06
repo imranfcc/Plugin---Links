@@ -41,7 +41,7 @@ if(isset($_POST["SubmitForm"])){
 
 		<form action='' Method='POST' class=" pt-3">
 			<div class="form-floating">
-  				<select class="form-select" id="sel1" name="Status">
+  				<select class="form-select" id="sel1" name="sel1ist">
    					<option>Enable</option>
    					<option>Disable</option>
   				</select>
