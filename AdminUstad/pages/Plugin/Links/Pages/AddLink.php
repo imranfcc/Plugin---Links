@@ -1,5 +1,6 @@
 <?php
 if(isset($_POST["SubmitForm"])){
+	$ValueStatus=mysqli_real_escape_string($con, $_POST["FormLink_Status"]);
 	$ValueTitle=mysqli_real_escape_string($con, $_POST["FormLink_Title"]);
 	$ValueLink=mysqli_real_escape_string($con, $_POST["FormLink_Link"]);
 	$ValueTarget=mysqli_real_escape_string($con, $_POST["FormLink_Target"]);
@@ -14,7 +15,7 @@ if(isset($_POST["SubmitForm"])){
 	}  else {
 		// Insert Now
 		$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
-		VALUES ('Status', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
+		VALUES ('$ValueStatus', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
 		if($con->query($sql)===TRUE){
 			header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
 		}
@@ -41,7 +42,7 @@ if(isset($_POST["SubmitForm"])){
 
 		<form action='' Method='POST' class=" pt-3">
 			<div class="form-floating">
-  				<select class="form-select" id="sel1" name="sel1">
+  				<select class="form-select" id="sel1" name="FormLink_Status">
    					<option>Enable</option>
    					<option>Disable</option>
   				</select>
