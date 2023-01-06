@@ -39,7 +39,7 @@ if(isset($_POST["SubmitForm"])){
     		<strong>Error!</strong> <?php echo $Error_Title; ?>
   		</div><?php } ?>
 
-		<form action='' Method='POST' class="">
+		<form action='' Method='POST' class=" pt-3">
 			<div class="form-floating">
   				<select class="form-select" id="sel1" name="sellist">
    					<option>Enable</option>
@@ -59,7 +59,7 @@ if(isset($_POST["SubmitForm"])){
       			<input name="FormLink_Target" class="form-control"  placeholder="Target">
       			<label for="Target">Target</label>
    			</div>
-			<div class="form-floating mb-3 mt-3">
+			<div class="form-floating mb-3 mt-3 d-none">
       			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
       			<label for="InId">InId</label>
     		</div>
@@ -67,11 +67,11 @@ if(isset($_POST["SubmitForm"])){
       			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon">
       			<label for="email">Icon</label>
     		</div>
-  			<!--<button type="submit" name="SubmitForm" value="Links" class="btn btn-primary">Submit</button> -->
-			  <div class="d-grid gap-2">
+  			<button type="submit" name="SubmitForm" value="Links" class="btn btn-lg  btn-primary w-100">Submit</button>
+			<!--<div class="d-grid gap-2">
   				<button class="btn btn-primary" type="submit" name='SubmitForm'>SubmitForm</button>
   				
-			  </div>
+			  </div>-->
 		</form>
 	</div>
 </main>
