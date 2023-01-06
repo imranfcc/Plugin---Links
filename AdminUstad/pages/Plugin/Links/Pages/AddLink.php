@@ -16,7 +16,7 @@ if(isset($_POST["SubmitForm"])){
 		$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
 		VALUES ('Status', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
 		if($con->query($sql)===TRUE){
-			header("Location: "dashboard?ShowInId=".$ValueInId);
+			header("Location: dashboard?ShowInId=".$ValueInId);
 		}
 	}
 } // Close POST
