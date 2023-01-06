@@ -60,7 +60,7 @@ if(isset($_POST["SubmitForm"])){
       			<label for="Target">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
+      			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>{Number(this.state.myNumber).toString()}/">
       			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
