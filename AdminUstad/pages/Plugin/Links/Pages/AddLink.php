@@ -35,6 +35,7 @@ if(isset($_POST["SubmitForm"])){
 
 <main class="<?php echo \template\cfg("WebWidth"); ?>">
 	<div class="row">
+
 		<?php if(isset($Error_Title)){ ?>
 		<div class="alert alert-danger">
     		<strong>Error!</strong> <?php echo $Error_Title; ?>
@@ -76,23 +77,6 @@ if(isset($_POST["SubmitForm"])){
 		</form>
 	</div>
 </main>
-<?php
-
-//$insert = mysqli_query("INSERT INTO sh_pl_links (Status, Title, Link, Target, InId, Icon)
-//	VALUES ('Enable','Computer' ,'Laptop','Sale' ,15)");
-
-// if(isset($_POST[user]))
-// {
-// $T=$_POST["Title"];
-// $l=$_POST["Link"];
-// $tt=$_POST["Target"];
-// $i=$_POST["InId"];
-
-// $sql = "INSERT INTO sh_pl_links (`Title`,`Link`,`Target`,`InId`)
-// VALUES ('$T','$l','$tt','$i')";
-// }
-// $con->query($sql);
-?>	
 
 
 <!-- End : Your Page Source -->
