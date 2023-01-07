@@ -55,4 +55,3 @@
 		</form>
 	</div>
 </main>
-<?php
