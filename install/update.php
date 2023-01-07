@@ -20,7 +20,7 @@
   if($con->query($sql)===TRUE){
     header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
 } 
-   $sql = mysqli_query("UPDATE sh_pl_links SET Title='webcam' WHERE Id=5");
+   $sql = mysqli_query($con,"UPDATE sh_pl_links SET Title='webcam' WHERE Id=5");
    ?>
 		<form action='' Method='POST' class=" pt-3">
 			<div class="form-floating">
