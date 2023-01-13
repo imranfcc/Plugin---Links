@@ -16,7 +16,17 @@ if(isset($_POST["SubmitForm"])){
 		// Insert Now
 		$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
 		VALUES ('$ValueStatus', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
+		    if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksitleIDT"]==$ExistLinksitleID){
+        $sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
+    } else {
+        
+    }ID"]==$ExistLinksitleID){
+				$sql = "UPDATE `sh_pl_links` SET `Status`='$ValueBrandStatus', `Name`='$ValueBrandName' WHERE `Id`='$_POST[EditBarndNameID]'";
+			} else {
+				
+			}
 		if($con->query($sql)===TRUE){
+
 			header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
 		}
 	}
@@ -50,7 +60,7 @@ if(isset($_POST["SubmitForm"])){
   				<label for="sel1" class="form-abel">Select list (select one):</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_Title" class="form-control" id="email" placeholder="Type Title"  required>
+      			<input name="FormLink_Title" class="form-control" id="email" placeholder="Type Title" value="<?php echo $_GET["EditlinkNameID"]; ?>value="<?php if(isset($$ValueTitle)){ echo stripslashes($ValueTitle); } ?>"  required >
       			<label for="Title">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
