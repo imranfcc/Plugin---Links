@@ -79,8 +79,8 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
 		<form action='' Method='POST' class=" pt-3">
 			<div class="form-floating">
   				<select class="form-select" id="sel1" name="FormLink_Status">
-   					<option>Enable</option>
-   					<option>Disable</option>
+   					<option <?php if(isset($ValueStatus) && $ValueStatus=="Enable"){ echo "selected";} ?>>Enable</option>
+   					<option <?php if(isset($ValueStatus) && $ValueStatus=="Disable"){ echo "selected";} ?>>Disable</option>
   				</select>
   				<label for="sel1" class="form-abel">Select list (select one):</label>
 			</div>
