@@ -10,6 +10,8 @@ if(isset($_POST["SubmitForm"])){
 	$result = $con->query($sql);
 
 	if ($result->num_rows > 0) {
+		$row = $result->fetch_assoc();
+		$ExistLinksId=$row["Id"];
 	 	$Error_Title="This Title name is alrady exist!";
 	}  else {
 	 	// Insert Now
@@ -18,8 +20,8 @@ if(isset($_POST["SubmitForm"])){
 	}
 
 
-	if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksTitleID){
-         $sq = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Title`='$ValueTitle', `Link`='$ValueLink', `Target`='$ValueTarget', `InId`='$ValueInId', `Icon`='$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
+	if(isset($_POST["EditLinksId"]) && $_POST["EditLinksId"]==$ExistLinksId){
+         $sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Title`='$ValueTitle', `Link`='$ValueLink', `Target`='$ValueTarget', `InId`='$ValueInId', `Icon`='$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
     
 	} 
         
