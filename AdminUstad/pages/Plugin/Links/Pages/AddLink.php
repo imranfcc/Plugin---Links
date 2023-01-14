@@ -41,6 +41,7 @@ if(isset($_POST["SubmitForm"])){
 	 	$result = $con->query($sql);
 	 	if ($result->num_rows > 0) {
 	 		$row = $result->fetch_assoc();
+			?><script>alert("balebale");</script><?php
 			if(!isset($_POST["SubmitForm"])){
 				$ValueStatus=$row["Status"];
 				$ValueTitle=$row["Title"];
