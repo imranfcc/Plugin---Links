@@ -101,7 +101,7 @@ if(isset($_POST["SubmitForm"])){
       			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon">
       			<label for="email">Icon</label>
     		</div>
-			<input name='EditLinksId'>
+			<input name='EditLinksId' value="<?= $ValueTitle;?>">
   			<button type="submit" name="SubmitForm" value="Links" class="btn btn-lg  btn-primary w-100">Submit</button>
 			<!--<div class="d-grid gap-2">
   				<button class="btn btn-primary" type="submit" name='SubmitForm'>SubmitForm</button>
