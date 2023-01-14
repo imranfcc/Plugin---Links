@@ -27,7 +27,7 @@ if(isset($_POST["SubmitForm"])){
 		}
 	}
 	if(isset($_GET["EditBarndNameID"])){
-		$sql = "SELECT * FROM `sh_pl_brand_names` WHERE `Id`='$_GET[EditBarndNameID]'";
+		$sql = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditTitleID]'";
 		$result = $con->query($sql);
 		if ($result->num_rows > 0) {
 			$row = $result->fetch_assoc();
