@@ -26,7 +26,7 @@ if(isset($_POST["SubmitForm"])){
 			header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
 		}
 	}
-	if(isset($_GET["EditBarndNameID"])){
+	if(isset($_GET["EditLinksTitleID"])){
 		$sql = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditTitleID]'";
 		$result = $con->query($sql);
 		if ($result->num_rows > 0) {
