@@ -6,7 +6,7 @@ if(isset($_POST["SubmitForm"])){
 	$ValueTarget=mysqli_real_escape_string($con, $_POST["FormLink_Target"]);
 	$ValueInId=mysqli_real_escape_string($con, $_POST["FormLink_InId"]);
 	$ValueIcon=mysqli_real_escape_string($con, $_POST["FormLink_Icon"]);
-	$sql = "SELECT Id FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
+	$sql = "SELECT Id,InId FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
 	$result = $con->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -83,7 +83,7 @@ if(isset($_POST["SubmitForm"])){
       			<input name="FormLink_Target" class="form-control"  placeholder="Target">
       			<label for="Target">Target</label>
    			</div>
-			<div class="form-floating mb-3 mt-3 d-none">
+			<div class="form-floating mb-3 mt-3">
       			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
       			<label for="InId">InId</label>
     		</div>
