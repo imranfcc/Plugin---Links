@@ -21,7 +21,13 @@ if(isset($_POST["SubmitForm"])){
 
 
 	if(isset($_POST["EditLinksId"])){
-    	$sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Title`='$ValueTitle', `Link`='$ValueLink', `Target`='$ValueTarget', `InId`='$ValueInId', `Icon`='$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
+    	$sql = "UPDATE `sh_pl_links` SET 
+			`Status`='$ValueStatus', 
+			`Title`='$ValueTitle', 
+			`Link`='$ValueLink', 
+			`Target`='$ValueTarget', 
+			`InId`='$ValueInId', 
+			`Icon`='$ValueIcon' WHERE `Id`='$_POST[EditLinksId]'";
     
 	} 
         
