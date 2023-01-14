@@ -7,24 +7,26 @@ if(isset($_POST["SubmitForm"])){
 	$ValueInId=mysqli_real_escape_string($con, $_POST["FormLink_InId"]);
 	$ValueIcon=mysqli_real_escape_string($con, $_POST["FormLink_Icon"]);
 	$sql = "SELECT Id FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
-	// $result = $con->query($sql);
+	$result = $con->query($sql);
 
-	// if ($result->num_rows > 0) {
-	// 	$Error_Title="This Title name is alrady exist!";
-	// 	?><script>alert("Error")</script><?php
-	// }  else {
-	// 	// Insert Now
-	// 	$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
-	// 	VALUES ('$ValueStatus', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
-	// 	    if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksTitleID){
-    //     $sql1 = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
-    // } else {
+	if ($result->num_rows > 0) {
+	 	$Error_Title="This Title name is alrady exist!";
+	}  else {
+	 	// Insert Now
+	 	$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
+	 	VALUES ('$ValueStatus', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
+	}
+
+
+	if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksTitleID){
+         //$sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
+    
+	} 
         
     
-	// 	if($con->query($sql1)===TRUE){
-
-	// 		header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
-	// 	}
+	if($con->query($sql)===TRUE){
+		header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
+	}
 	// }
 	// if(isset($_GET["EditLinksTitleID"])){
 	// 	$sql2 = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditLinksTitleID]'";
