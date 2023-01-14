@@ -54,6 +54,8 @@ if(isset($_POST["SubmitForm"])){
 			
 	 	}
 	}
+
+if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,22 +89,24 @@ if(isset($_POST["SubmitForm"])){
       			<label for="Title">Title</label>
 			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_Link" class="form-control"  placeholder="Link" >
+      			<input name="FormLink_Link" class="form-control"  placeholder="Link"  value="<?php if(isset($ValueLink)){ echo stripslashes($ValueLink); } ?>">
       			<label for="Link">Link</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_Target" class="form-control"  placeholder="Target">
+      			<input name="FormLink_Target" class="form-control"  placeholder="Target"  value="<?php if(isset($ValueTarget)){ echo stripslashes($ValueTarget); } ?>">
       			<label for="Target">Target</label>
    			</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($_GET["AutoFill_InId"])){ echo $_GET["AutoFill_InId"]; } ?>">
+      			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($ValueInId)){ echo $ValueInId; } ?>">
       			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon">
+      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon" alue="<?php if(isset($ValueIcon)){ echo stripslashes($ValueIcon); } ?>">
       			<label for="email">Icon</label>
     		</div>
-			<input name='EditLinksId' value="<?= $ValueTitle;?>">
+			<?php if(isset($_GET["EditLinksId"])){ ?>
+				<input name='EditLinksId' value="<?= $_GET["EditLinksId"];?>">
+			<?php } ?>
   			<button type="submit" name="SubmitForm" value="Links" class="btn btn-lg  btn-primary w-100">Submit</button>
 			<!--<div class="d-grid gap-2">
   				<button class="btn btn-primary" type="submit" name='SubmitForm'>SubmitForm</button>
