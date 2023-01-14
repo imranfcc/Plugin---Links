@@ -35,13 +35,14 @@ if(isset($_POST["SubmitForm"])){
 	if($con->query($sql)===TRUE){
 		header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
 	}
-	// }
+}
+
 	if(isset($_GET["EditLinksId"])){
 	 	$sql = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditLinksId]'";
 	 	$result = $con->query($sql);
 	 	if ($result->num_rows > 0) {
 	 		$row = $result->fetch_assoc();
-			?><script>alert("balebale");</script><?php
+			
 			if(!isset($_POST["SubmitForm"])){
 				$ValueStatus=$row["Status"];
 				$ValueTitle=$row["Title"];
@@ -53,7 +54,6 @@ if(isset($_POST["SubmitForm"])){
 			
 	 	}
 	}
-} // Close POST
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
