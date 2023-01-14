@@ -16,7 +16,7 @@ if(isset($_POST["SubmitForm"])){
 		// Insert Now
 		$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
 		VALUES ('$ValueStatus', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
-		    if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksitleID){
+		    if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksTitleID){
         $sql1 = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
     } else {
         
