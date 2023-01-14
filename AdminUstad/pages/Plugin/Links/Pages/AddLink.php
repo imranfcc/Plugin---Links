@@ -19,7 +19,7 @@ if(isset($_POST["SubmitForm"])){
 
 
 	if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksTitleID){
-         //$sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
+         $sq = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Title`='$ValueTitle', `Link`='$ValueLink', `Target`='$ValueTarget', `InId`='$ValueInId', `Icon`='$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
     
 	} 
         
@@ -89,6 +89,7 @@ if(isset($_POST["SubmitForm"])){
       			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon">
       			<label for="email">Icon</label>
     		</div>
+			<input name='EditLinksId'>
   			<button type="submit" name="SubmitForm" value="Links" class="btn btn-lg  btn-primary w-100">Submit</button>
 			<!--<div class="d-grid gap-2">
   				<button class="btn btn-primary" type="submit" name='SubmitForm'>SubmitForm</button>
