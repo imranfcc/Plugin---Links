@@ -27,7 +27,7 @@ if(isset($_GET["ShowInId"])){
 	<div class="row">
 		<div class="card border-0 p-0">
 			<div class="card-header p-2 bg-white fw-bold" style="color: var(--bs-green);">
-				<?php if($ShowInId>"0"){ ?><a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink??EditLinkdNameID=<?php echo $row["ShowInId"]; ?>" i class="fad fa-edit float-end text-dark"></i></a></i><?php } ?>
+				<?php if($ShowInId>"0"){ ?><a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink??EditLinkdNameID=<?php echo $row["Id"]; ?>" i class="fad fa-edit float-end text-dark"></i></a></i><?php } ?>
 				<?php echo $ShowName; ?>:
 			</div>
 
