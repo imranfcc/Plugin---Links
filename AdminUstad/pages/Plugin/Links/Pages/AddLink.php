@@ -33,7 +33,7 @@ if(isset($_POST["SubmitForm"])){
 			$row = $result->fetch_assoc();
 			if(!isset($_POST["SubmitForm"])){
 				//$ValueBrandStatus=$row["Status"];
-				$$ValueTitle=$row["Title"];
+				$ValueTitle=$row["Title"];
 			}
 			
 		}
