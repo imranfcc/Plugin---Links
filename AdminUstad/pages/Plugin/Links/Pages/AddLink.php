@@ -20,11 +20,7 @@ if(isset($_POST["SubmitForm"])){
         $sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
     } else {
         
-    }ID"]==$ExistLinksitleID){
-				$sql = "UPDATE `sh_pl_links` SET `Status`='$ValueBrandStatus', `Name`='$ValueBrandName' WHERE `Id`='$_POST[EditBarndNameID]'";
-			} else {
-				
-			}
+    
 		if($con->query($sql)===TRUE){
 
 			header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
