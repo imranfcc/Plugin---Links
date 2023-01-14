@@ -98,6 +98,6 @@ if(isset($_POST["SubmitForm"])){
 
 
 <!-- End : Your Page Source -->
-<?php include("page/inc/bs4_bottombar.php"); ?>
+<?php include("pages/inc/bs4_bottombar.php"); ?>
 </body>
 </html>
