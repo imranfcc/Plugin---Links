@@ -27,10 +27,10 @@ if(isset($_POST["SubmitForm"])){
 		}
 	}
 	if(isset($_GET["EditLinksTitleID"])){
-		$sql = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditLinksTitleID]'";
-		$result = $con->query($sql);
-		if ($result->num_rows > 0) {
-			$row = $result->fetch_assoc();
+		$sql2 = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditLinksTitleID]'";
+		$result1 = $con->query($sql2);
+		if ($result1->num_rows > 0) {
+			$row = $result1->fetch_assoc();
 			if(!isset($_POST["SubmitForm"])){
 				//$ValueBrandStatus=$row["Status"];
 				$ValueTitle=$row["Title"];
