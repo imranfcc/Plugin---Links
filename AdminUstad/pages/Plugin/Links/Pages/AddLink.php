@@ -1,11 +1,11 @@
 <?php
 if(isset($_POST["SubmitForm"])){
-	$ValueStatus=mysqli_real_escape_string($con, $_POST["FormLink_Status"]);
-	$ValueTitle=mysqli_real_escape_string($con, $_POST["FormLink_Title"]);
-	$ValueLink=mysqli_real_escape_string($con, $_POST["FormLink_Link"]);
-	$ValueTarget=mysqli_real_escape_string($con, $_POST["FormLink_Target"]);
-	$ValueInId=mysqli_real_escape_string($con, $_POST["FormLink_InId"]);
-	$ValueIcon=mysqli_real_escape_string($con, $_POST["FormLink_Icon"]);
+	$ValueStatus=$row["FormLink_Status"]);
+	$ValueTitle=$row["FormLink_Title"]);
+	$ValueLink=$row["FormLink_Link"]);
+	$ValueTarget=$row["FormLink_Target"]);
+	$ValueInId=$row["FormLink_InId"]);
+	$ValueIcon=$row["FormLink_Icon"]);
 	$sql = "SELECT Id,InId FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
 	$result = $con->query($sql);
 
@@ -36,18 +36,22 @@ if(isset($_POST["SubmitForm"])){
 		header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
 	}
 	// }
-	// if(isset($_GET["EditLinksTitleID"])){
-	// 	$sql2 = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditLinksTitleID]'";
-	// 	$result1 = $con->query($sql2);
-	// 	if ($result1->num_rows > 0) {
-	// 		$row = $result1->fetch_assoc();
-	// 		if(!isset($_POST["SubmitForm"])){
-	// 			//$ValueBrandStatus=$row["Status"];
-	// 			$ValueTitle=$row["Title"];
-	// 		}
+	if(isset($_GET["EditLinksId"])){
+	 	$sql = "SELECT * FROM `sh_pl_links` WHERE `Id`='$_GET[EditLinksId]'";
+	 	$result = $con->query($sql);
+	 	if ($result->num_rows > 0) {
+	 		$row = $result->fetch_assoc();
+			if(!isset($_POST["SubmitForm"])){
+				$ValueStatus=$row["Status"]);
+				$ValueTitle=$row["Title"]);
+				$ValueLink=$row["Link"]);
+				$ValueTarget=$row["Target"]);
+				$ValueInId=$row["InId"]);
+				$ValueIcon=$row["Icon"]);
+	 		}
 			
-	// 	}
-	// }
+	 	}
+	}
 } // Close POST
 ?><!DOCTYPE html>
 <html lang="en">
