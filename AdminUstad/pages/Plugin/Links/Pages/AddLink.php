@@ -101,7 +101,7 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
       			<label for="InId">InId</label>
     		</div>
 			<div class="form-floating mb-3 mt-3">
-      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon" alue="<?php if(isset($ValueIcon)){ echo stripslashes($ValueIcon); } ?>">
+      			<input type="text" class="form-control" id="email" placeholder="Enter email" name="FormLink_Icon" value="<?php if(isset($ValueIcon)){ echo stripslashes($ValueIcon); } ?>">
       			<label for="email">Icon</label>
     		</div>
 			<?php if(isset($_GET["EditLinksId"])){ ?>
