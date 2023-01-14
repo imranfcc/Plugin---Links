@@ -16,7 +16,7 @@ if(isset($_POST["SubmitForm"])){
 		// Insert Now
 		$sql = "INSERT INTO `sh_pl_links` (`Status`, `Title`,`Link`,`Target`,`InId`, `Icon`)
 		VALUES ('$ValueStatus', '$ValueTitle','$ValueLink','$ValueTarget','$ValueInId', '$ValueIcon')";
-		    if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksitleIDT"]==$ExistLinksitleID){
+		    if(isset($_POST["EditLinksTitleID"]) && $_POST["EditLinksTitleID"]==$ExistLinksitleID){
         $sql = "UPDATE `sh_pl_links` SET `Status`='$ValueStatus', `Name`='$ValueTitle', '$ValueLink','$ValueTarget','$ValueInId','$ValueIcon' WHERE `Id`='$_POST[EditLinksTitleID]'";
     } else {
         
@@ -24,6 +24,18 @@ if(isset($_POST["SubmitForm"])){
 		if($con->query($sql)===TRUE){
 
 			header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
+		}
+	}
+	if(isset($_GET["EditBarndNameID"])){
+		$sql = "SELECT * FROM `sh_pl_brand_names` WHERE `Id`='$_GET[EditBarndNameID]'";
+		$result = $con->query($sql);
+		if ($result->num_rows > 0) {
+			$row = $result->fetch_assoc();
+			if(!isset($_POST["SubmitForm"])){
+				//$ValueBrandStatus=$row["Status"];
+				$$ValueTitle=$row["Title"];
+			}
+			
 		}
 	}
 } // Close POST
