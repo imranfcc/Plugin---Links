@@ -2,6 +2,7 @@
 if(isset($_GET["ShowInId"])){ 
 	$ShowInId=$_GET["ShowInId"]; 
 	$ShowName=\P\Links\Id_to_Name($_GET["ShowInId"]);
+	if($ShowInId=="0"){ $ShowName="root"; }
 } else {  
 	$ShowInId="0";
 	$ShowName="root";
@@ -27,7 +28,9 @@ if(isset($_GET["ShowInId"])){
 	<div class="row">
 		<div class="card border-0 p-0">
 			<div class="card-header p-2 bg-white fw-bold" style="color: var(--bs-green);">
-				<?php if($ShowInId>"0"){ ?><a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink??EditLinksId=<?php echo $row["EditLinksId"]; ?>" i class="fad fa-edit float-end text-dark"></i></a></i><?php } ?>
+				<?php if($ShowInId>"0"){ ?>
+					<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages/AddLink?AutoFill_InId=<?php echo $ShowInId; ?>&EditLinksId=<?php echo $ShowInId; ?>" ><i class="fad fa-edit float-end text-dark"></i></a>
+				<?php } ?>
 				<?php echo $ShowName; ?>:
 			</div>
 
