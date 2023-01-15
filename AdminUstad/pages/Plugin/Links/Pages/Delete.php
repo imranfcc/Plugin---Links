@@ -1,7 +1,7 @@
 <?php
 
     //include("pages/inc/Header.php"); 
-         $newid = $GET['id'];
+         $newid = $_GET['id'];
          print_r($newid);
         //if($con->query($sql)===TRUE){
         //header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard?ShowInId=".$ValueInId);
