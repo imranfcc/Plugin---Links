@@ -8,9 +8,6 @@
 
     $sql = "DELETE FROM `sh_pl_links` WHERE `Id`='$newid'";
     $result = mysqli_query($con,$sql) or die ("connection fail");
-    ?>
-    <!-- End : Your Page Source -->
-    <?php include("pages/inc/bs4_bottombar.php"); ?>
-    </body>
-    </html>
+    header('Location: https://www.imrantest.sidhosting.net/AdminUstad/Plugin/Links/dashboard');
     
+?>
