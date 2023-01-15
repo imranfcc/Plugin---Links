@@ -8,7 +8,7 @@ if(isset($_POST["SubmitForm"])){
 	$ValueIcon=mysqli_real_escape_string($con, $_POST["FormLink_Icon"]);
 	$sql = "SELECT Id,InId FROM `sh_pl_links` WHERE `Title`='$ValueTitle' AND `InId`='$ValueInId' ";
 	$result = $con->query($sql);
-
+	$ExistLinksId=null;
 	if ($result->num_rows > 0) {
 		$row = $result->fetch_assoc();
 		$ExistLinksId=$row["Id"];
@@ -20,7 +20,7 @@ if(isset($_POST["SubmitForm"])){
 	}
 
 
-	if(isset($_POST["EditLinksId"])){
+	if(isset($_POST["EditLinksId"])  &&  $_POST["EditLinksId"]==$ExistLinksId){
     	$sql = "UPDATE `sh_pl_links` SET 
 			`Status`='$ValueStatus', 
 			`Title`='$ValueTitle', 
