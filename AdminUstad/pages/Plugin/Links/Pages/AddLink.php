@@ -119,7 +119,7 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
 <script>
 		function checkdelete()
 		{
-			return Confirm('Are You sure To Delete this Record ?');
+			return confirm('Are You sure To Delete this Record ?');
 		}
 </script>
 <!-- End : Your Page Source -->
