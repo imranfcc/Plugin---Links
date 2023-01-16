@@ -96,7 +96,7 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
       			<input name="FormLink_Target" class="form-control"  placeholder="Target"  value="<?php if(isset($ValueTarget)){ echo stripslashes($ValueTarget); } ?>">
       			<label for="Target">Target</label>
    			</div>
-			<div class="form-floating mb-3 mt-3d d-none>
+			<div class="form-floating mb-3 mt-3d d-none">
       			<input name="FormLink_InId" class="form-control"  placeholder"InId" value="<?php if(isset($ValueInId)){ echo $ValueInId; } ?>">
       			<label for="InId">InId</label>
     		</div>
