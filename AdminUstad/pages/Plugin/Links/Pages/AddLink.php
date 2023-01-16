@@ -107,7 +107,7 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
 			<?php if(isset($_GET["EditLinksId"])){ ?>
 				<input type="hidden" name='EditLinksId' value="<?= $_GET["EditLinksId"];?>">
 			<?php } ?>
-  			<button type="submit" name="SubmitForm" value="Links" class="btn btn-lg  btn-primary w-100">Submit</button><br>
+  			<button type="submit" name="SubmitForm" value="Links" class="btn btn-lg  btn-primary w-100 m-1">Submit</button><br>
 			  <a class="btn btn-danger w-100 m-1" href="AdminUstad/Plugin/Links/Pages/Delete?id=<?php echo $row['Id']; ?>" role="button">Delete-Record</a>
 			<!--<div class="d-grid gap-2">
   				<button class="btn btn-primary" type="submit" name='SubmitForm'>SubmitForm</button>
