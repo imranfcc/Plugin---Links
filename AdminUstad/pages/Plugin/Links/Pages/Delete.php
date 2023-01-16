@@ -9,7 +9,7 @@
     $sql = "DELETE FROM `sh_pl_links` WHERE `Id`='$newid'";
     $result = mysqli_query($con,$sql) or die ("connection fail");
     header('Location: https://www.imrantest.sidhosting.net/AdminUstad/Plugin/Links/dashboard');
-    if($result){
+    if('$result'){
         echo"<script>alert('This is Deleted')</script>";
        }
        else{
