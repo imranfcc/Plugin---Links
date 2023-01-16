@@ -123,11 +123,7 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
 		}
 </script>
 
-<?php
-	if($result){
-	 echo"<script>alert('This is Deleted')</script>";
-	}
-	?>
+
 	 
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>
