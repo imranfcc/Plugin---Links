@@ -13,7 +13,7 @@
         echo"<script>alert('This is Deleted')</script>";
        }
        else{
-        ("")
+        echo"";
        }
     
 ?>
