@@ -122,6 +122,7 @@ if(!isset($ValueInId)){ $ValueInId=$_GET["AutoFill_InId"]; }
 			return confirm('Are You sure To Delete this Record ?');
 		}
 </script>
+<?php echo"<script>alert('This is Deleted')</script>";?>
 <!-- End : Your Page Source -->
 <?php include("pages/inc/bs4_bottombar.php"); ?>
 </body>
